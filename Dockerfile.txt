@@ -1,0 +1,9 @@
+FROM nginx:alpine
+
+# Hapus file default nginx
+RUN rm -rf /usr/share/nginx/html/*
+
+# Copy seluruh file project ke document root nginx
+COPY . /usr/share/nginx/html
+
+EXPOSE 80
